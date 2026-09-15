@@ -1,0 +1,262 @@
+/* ==========================================================================
+   RESET E CONFIGURAÇÕES BASE (UNIDADES RELATIVAS)
+   ========================================================================== */
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+    /* Cores */
+    --bg-color: #f8f9fa;
+    --surface-color: #ffffff;
+    --text-primary: #1e293b;
+    --text-secondary: #64748b;
+    --brand-accent: #2563eb;
+    --brand-hover: #1d4ed8;
+    --border-color: #e2e8f0;
+
+    /* Tipografia - Famílias */
+    --font-heading: 'Montserrat', sans-serif;
+    --font-body: 'Merriweather', Georgia, serif;
+
+    /* Escala Tipográfica Modular Base (Razão Major Third ~ 1.25) */
+    --scale-ratio: 1;
+    --fs-base: 1rem;                                     /* 16px */
+    --fs-tagline: calc(0.8rem * var(--scale-ratio));     /* ~12.8px */
+    --fs-body: calc(1rem * var(--scale-ratio));          /* 16px */
+    --fs-h3: calc(1.563rem * var(--scale-ratio));       /* ~25px */
+    --fs-h2: calc(1.953rem * var(--scale-ratio));       /* ~31px */
+    --fs-h1: calc(2.441rem * var(--scale-ratio));       /* ~39px */
+
+    /* Entrelinha (Line Height) */
+    --lh-heading: 1.2;
+    --lh-body: 1.65;
+}
+
+body {
+    font-family: var(--font-body);
+    font-size: var(--fs-body);
+    line-height: var(--lh-body);
+    color: var(--text-primary);
+    background-color: var(--bg-color);
+    padding-bottom: 3rem;
+}
+
+.container {
+    width: 90%;
+    max-width: 860px;
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   HIERARQUIA TIPOGRÁFICA & ESTILOS DE TÍTULOS
+   ========================================================================== */
+
+h1, h2, h3 {
+    font-family: var(--font-heading);
+    line-height: var(--lh-heading);
+    color: #0f172a;
+    letter-spacing: -0.02em;
+}
+
+h1.main-title {
+    font-size: var(--fs-h1);
+    font-weight: 800;
+    margin-bottom: 0.75rem;
+}
+
+h2 {
+    font-size: var(--fs-h2);
+    font-weight: 700;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+h3 {
+    font-size: var(--fs-h3);
+    font-weight: 600;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    color: #334155;
+}
+
+p {
+    margin-bottom: 1.25rem;
+}
+
+/* Elementos de apoio e contraste estendido */
+.tagline {
+    font-family: var(--font-heading);
+    font-size: var(--fs-tagline);
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--brand-accent);
+    margin-bottom: 0.5rem;
+}
+
+.lead {
+    font-size: calc(1.15rem * var(--scale-ratio));
+    line-height: 1.5;
+    color: var(--text-secondary);
+}
+
+.meta {
+    font-family: var(--font-heading);
+    font-size: calc(0.85rem * var(--scale-ratio));
+    color: var(--text-secondary);
+}
+
+.badge {
+    display: inline-block;
+    font-family: var(--font-heading);
+    font-size: 0.75rem;
+    font-weight: 700;
+    background-color: #dbeafe;
+    color: var(--brand-accent);
+    padding: 0.25rem 0.5rem;
+    border-radius: 4px;
+    margin-bottom: 0.5rem;
+}
+
+/* ==========================================================================
+   COMPONENTES E SEÇÕES DE LAYOUT
+   ========================================================================== */
+
+.header {
+    background-color: var(--surface-color);
+    padding: 3rem 0;
+    border-bottom: 1px solid var(--border-color);
+    margin-bottom: 2rem;
+}
+
+.controls-card {
+    background-color: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-radius: 8px;
+    padding: 1.5rem;
+    margin-bottom: 2.5rem;
+}
+
+.control-title {
+    font-size: 1.25rem;
+    margin-top: 0;
+    margin-bottom: 0.25rem;
+}
+
+.control-desc {
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}
+
+.button-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.btn {
+    font-family: var(--font-heading);
+    font-size: 0.875rem;
+    font-weight: 600;
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.btn-primary {
+    background-color: var(--brand-accent);
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: var(--brand-hover);
+}
+
+.btn-secondary {
+    background-color: #475569;
+    color: #ffffff;
+}
+
+.btn-secondary:hover {
+    background-color: #334155;
+}
+
+.btn-outline {
+    background-color: transparent;
+    border-color: #cbd5e1;
+    color: var(--text-primary);
+}
+
+.btn-outline:hover {
+    background-color: #f1f5f9;
+}
+
+.content-block {
+    background-color: var(--surface-color);
+    padding: 2.5rem;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+}
+
+.article-header {
+    border-bottom: 2px solid var(--border-color);
+    padding-bottom: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+ul {
+    margin-bottom: 1.25rem;
+    padding-left: 1.5rem;
+}
+
+li {
+    margin-bottom: 0.5rem;
+}
+
+/* Tabela de Escala Tipográfica */
+.table-wrapper {
+    overflow-x: auto;
+    margin: 1.5rem 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: var(--font-heading);
+    font-size: 0.9rem;
+    text-align: left;
+}
+
+th, td {
+    padding: 0.75rem 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+
+th {
+    background-color: #f1f5f9;
+    font-weight: 700;
+}
+
+code {
+    background-color: #f1f5f9;
+    padding: 0.2rem 0.4rem;
+    border-radius: 4px;
+    font-size: 0.85em;
+    color: #0f172a;
+}
+
+.footer {
+    text-align: center;
+    margin-top: 3rem;
+    font-family: var(--font-heading);
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+}

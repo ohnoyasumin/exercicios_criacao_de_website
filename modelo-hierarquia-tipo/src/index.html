@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade: Hierarquia Tipográfica em Web Design</title>
+    <!-- Importação das 20 Fontes do Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@700&family=Fira+Code:wght@400;600&family=Inter:wght@400;600;800&family=Lato:wght@400;700&family=Lora:ital,wght@0,400;0,600;1,400&family=Merriweather:wght@400;700&family=Montserrat:wght@400;700;800&family=Newsreader:opsz,wght@6..72,400;6..72,700&family=Open+Sans:wght@400;600&family=Oswald:wght@500;700&family=Playfair+Display:ital,wght@0,700;1,400&family=Poppins:wght@400;600;700&family=PT+Sans:wght@400;700&family=PT+Serif:wght@400;700&family=Raleway:wght@400;700;800&family=Roboto+Mono:wght@400;500&family=Roboto+Slab:wght@500;700&family=Roboto:wght@400;500;700&family=Source+Code+Pro:wght@400;600&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+
+    <!-- Arquivo CSS Principal -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container">
+            <p class="tagline">DISCIPLINA DE DESIGN DE WEBSITES</p>
+            <h1 class="main-title">Explorando a Hierarquia Tipográfica</h1>
+            <p class="lead">Ajuste e teste visualmente a relação de escala, peso e contraste dos elementos tipográficos em tempo real.</p>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Controles Interativos (JavaScript) -->
+        <section class="controls-card">
+            <h2 class="control-title">Painel de Ajuste Tipográfico</h2>
+            <p class="control-desc">Use os botões abaixo para alterar dinamicamente a escala e a densidade de leitura via JavaScript.</p>
+            <div class="button-group">
+                <button id="btn-aumentar" class="btn btn-primary">Aumentar Escala (120%)</button>
+                <button id="btn-reduzir" class="btn btn-secondary">Modo Leitura Densa (90%)</button>
+                <button id="btn-reset" class="btn btn-outline">Resetar Escala</button>
+            </div>
+        </section>
+
+        <!-- Artigo demonstrativo de hierarquia -->
+        <article id="preview-tipografico" class="content-block">
+            <header class="article-header">
+                <span class="badge">TÓPICO 05</span>
+                <h2>Princípios do Contraste Visual e Escala Tipográfica</h2>
+                <p class="meta">Publicado por Silvio • Atualizado para Web Design</p>
+            </header>
+
+            <section class="article-body">
+                <p>A <strong>hierarquia tipográfica</strong> é a estrutura invisível que orienta os olhos do leitor através de uma interface web. Sem uma diferenciação clara entre títulos, subtítulos e texto de corpo, o usuário enfrenta uma carga cognitiva elevada para compreender a relevância das informações.</p>
+
+                <h3>1. A Escolha das Famílias Tipográficas</h3>
+                <p>Para construir um contraste harmônico, utilizamos uma combinação de duas fontes distintas:</p>
+                <ul>
+                    <li><strong>Montserrat (Sans-serif):</strong> Utilizada nos títulos e rótulos devido ao seu apelo geométrico e alta legibilidade em blocos destacados.</li>
+                    <li><strong>Merriweather (Serif):</strong> Aplicada no corpo de texto para proporcionar um fluxo confortável de leitura em parágrafos longos.</li>
+                </ul>
+
+                <h3>2. A Escala Modular (Major Third - 1.25)</h3>
+                <p>Em vez de escolher tamanhos de fonte aleatórios, uma <em>escala tipográfica modular</em> garante uma relação matemática proporcional entre cada nível de texto:</p>
+
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Elemento</th>
+                                <th>Escala (rem)</th>
+                                <th>Pixels (Base 16px)</th>
+                                <th>Aplicação</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>h1.main-title</code></td>
+                                <td>2.441 rem</td>
+                                <td>~39 px</td>
+                                <td>Título principal da página</td>
+                            </tr>
+                            <tr>
+                                <td><code>h2</code></td>
+                                <td>1.953 rem</td>
+                                <td>~31 px</td>
+                                <td>Seções primárias</td>
+                            </tr>
+                            <tr>
+                                <td><code>h3</code></td>
+                                <td>1.563 rem</td>
+                                <td>~25 px</td>
+                                <td>Subseções de artigos</td>
+                            </tr>
+                            <tr>
+                                <td><code>body / p</code></td>
+                                <td>1.000 rem</td>
+                                <td>16 px</td>
+                                <td>Texto corrido</td>
+                            </tr>
+                            <tr>
+                                <td><code>.tagline / .meta</code></td>
+                                <td>0.800 rem</td>
+                                <td>12.8 px</td>
+                                <td>Avisos e meta-informações</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+
+                <h3>3. Ajuste Dinâmico com JavaScript</h3>
+                <p>Com a manipulação do DOM em JavaScript, é possível alterar a hierarquia visual em tempo real para responder a preferências de acessibilidade do usuário ou criar temas com diferentes densidades de conteúdo.</p>
+            </section>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2026 - Atividade Prática de Web Design • Elementos de Design em JavaScript</p>
+        </div>
+    </footer>
+
+    <!-- Script JavaScript -->
+    <script src="js/tipografia.js"></script>
+</body>
+</html>
